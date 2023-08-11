@@ -17,8 +17,6 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-const amount = Number(input.value);
-
 function createBoxes(amount) {
   if (amount < inputMinValue || amount > inputMaxValue) {
     alert(`Please enter a value from ${inputMinValue} to ${inputMaxValue}!`);
@@ -27,6 +25,7 @@ function createBoxes(amount) {
   
   let step = 20;  
   const totalMarkup = [];
+
   for (let i = inputMinValue; i <= amount; i += inputStepValue) {
     step += 10;
     const getHexColor = getRandomHexColor();
