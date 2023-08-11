@@ -2,9 +2,10 @@ const input = document.querySelector("#validation-input")
 input.addEventListener("blur", addClass)
 
 function addClass() {
-    input.value.length == input.getAttribute("data-length")
-        ? input.classList.add('valid')
-        : input.classList.add('invalid')
+    const inputLength = Number(input.getAttribute("data-length"));
+    
+    input.value.trim().length === inputLength
+        ? (input.classList.remove('invalid'), input.classList.add('valid'))
+        : (input.classList.remove('valid'), input.classList.add('invalid'))
 };
   
-input.addEventListener("focus", () => input.classList.remove('valid', 'invalid'))

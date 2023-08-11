@@ -3,7 +3,7 @@ const textOutput = document.querySelector("#name-output");
 const savedSpanValue = textOutput.textContent;
 
 textInput.addEventListener("input", event => {
-    const inputValue = event.currentTarget.value;
+    const inputValue = event.currentTarget.value.trim();
         
     inputValue === ""
         ? textOutput.textContent = savedSpanValue

@@ -7,9 +7,9 @@ function getRandomHexColor() {
  function getColor(){
    const getHexColor = getRandomHexColor();
    hexColor.textContent = `${getHexColor}`;
-   widget.style.backgroundColor = `${getHexColor}`;
+   body.style.backgroundColor = `${getHexColor}`;
 }
-  const widget = document.querySelector(".widget")
+  const body = document.querySelector("body")
   const hexColor = document.querySelector(".color")
   const btnChangeColor = document.querySelector(".change-color")
 
